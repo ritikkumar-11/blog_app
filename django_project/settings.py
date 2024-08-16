@@ -136,6 +136,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
@@ -146,8 +147,14 @@ SOCIALACCOUNT_PROVIDERS = {
             'access_type': 'online',
         },
         'OAUTH_PKCE_ENABLED': True,
+        'APP': {
+            'client_id': config('CLIENT_ID'),  
+            'secret': config('SEC_ID'),  
+            'key': ''  
+        }
     }
 }
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
