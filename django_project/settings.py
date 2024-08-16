@@ -104,6 +104,8 @@ DATABASES = {
   }
 }
 
+DATABASE_URL = config('DATABASE_URL')
+
 AUTHENTICATION_BACKENDS = [
     
     'allauth.account.auth_backends.AuthenticationBackend',
